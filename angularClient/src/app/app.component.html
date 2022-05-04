@@ -1,2 +1,23 @@
 <h1>Movies' Website</h1>
+<div> 
+  Navigation bar
+  <div>
+    <button (click)="sidenav.toggle()">SidebarToggle</button>
+</div>
+  
+</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode = "side" opened>
+    <div>Content of sidenav</div>
+    <div>
+      <button>Button 1</button>
+    </div>
+    <div>
+      <button>Button 2</button>
+    </div>
+</mat-sidenav>
+  <mat-sidenav-content>
+    main content here
+  </mat-sidenav-content>
+</mat-sidenav-container>
 <router-outlet></router-outlet>
