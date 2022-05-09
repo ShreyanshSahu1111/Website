@@ -1,21 +1,35 @@
-<h1>Movies' Website</h1>
-<div> 
-  Navigation bar
-  <div>
-    <button (click)="sidenav.toggle()">SidebarToggle</button>
-</div>
-  
-</div>
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode = "side" opened>
+<mat-toolbar-row class="titlebar">
+  <mat-toolbar>
+    <button mat-button>
+      Movies' Website
+      <a href="."></a>
+    </button>
+  </mat-toolbar>
+</mat-toolbar-row>
+<mat-toolbar-row>
+  <mat-toolbar>
+    <button mat-raised-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </mat-toolbar>
+</mat-toolbar-row>
+
+<mat-sidenav-container class="main-area">
+
+  <mat-sidenav #sidenav mode="side" opened>
     <div>Content of sidenav</div>
-    <div>
-      <button>Button 1</button>
-    </div>
-    <div>
-      <button>Button 2</button>
-    </div>
-</mat-sidenav>
+    <mat-nav-list>
+      <mat-list-item>
+        <a matLine href="/">Button1</a>
+        <button mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
   <mat-sidenav-content>
     main content here
   </mat-sidenav-content>
